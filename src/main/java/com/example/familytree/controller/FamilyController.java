@@ -21,4 +21,9 @@ public class FamilyController {
 	public String getSingleUser() {
 		return "fetching single user details";
 	}
+	
+	@GetMapping("/update")
+	public String updateUser() {
+		return "now user is update and deploment working fine";
+	}
 }
