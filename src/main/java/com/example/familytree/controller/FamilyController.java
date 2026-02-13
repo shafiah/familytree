@@ -11,4 +11,9 @@ public class FamilyController {
 	public String home() {
 		return "welcome to home page";
 	}
+	
+	@GetMapping("/list")
+	public String list() {
+		return "welcome to list page";
+	}
 }
