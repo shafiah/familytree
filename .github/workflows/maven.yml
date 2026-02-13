@@ -29,12 +29,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Stop old app
-      run: |
-        pkill -f familytree || true
-
-    - name: Run application
-      run: |
-        nohup java -jar target/*.jar > app.log 2>&1 &
+    - name: Restart app
+      run: sudo systemctl restart familytree
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
