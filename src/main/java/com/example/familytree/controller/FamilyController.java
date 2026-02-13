@@ -16,4 +16,9 @@ public class FamilyController {
 	public String list() {
 		return "welcome to list page";
 	}
+	
+	@GetMapping("/singleuser")
+	public String getSingleUser() {
+		return "fetching single user details";
+	}
 }
